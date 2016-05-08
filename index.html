@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>The active Bird</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+	<meta property="og:url"           content="https://www.facebook.com/stupidbird.mata" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Stupid Bird" />
+	<meta property="og:description"   content="Really" />
+	<meta property="og:image"         content="https://scontent-hkg3-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/1918192_641000622705941_335769567150627946_n.jpg?oh=1ce7c411d8560b48955cb1f9792b2561&oe=57707045" />
+	
+<style>
+
+	body {
+		margin:0px;
+		padding:0px;
+		text-align:center;
+		background-color: #d8ffe2;
+		background-image: url("bg.jpg");
+		
+	}
+	
+	canvas{
+
+		outline:0;
+		border:1px solid #000;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: -1;
+}
+	div {
+		position: absolute;
+		left: 20px;
+		top: 0px;
+		z-index: 1;
+	}
+	.alert {
+    padding: 80px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0.5px 0.5px;
+    
+}
+	#how {
+			left: 940px;
+			top: 50px;
+			z-index: 1;
+	}
+        #fblike {
+               left :0px;
+               top : 50px;
+               z-index: 3;
+}
+		
+#rank{         left: 70%;
+               top : 150px;
+               z-index: 5;
+                   text-align: left;
+}
+#points{         
+				left: 80%;
+               top : 100px;
+               z-index: 6;
+                   text-align: left;
+}
+#armor{
+                left: 70%;
+               top : 200px;
+               z-index: 5;
+                   text-align: left;
+}
+#heal{
+                left: 70%;
+               top : 250px;
+               z-index: 5;
+                   text-align: left;
+}
+#gameover{
+                left: 35%;
+               top : 150px;
+               z-index: 5;
+                   text-align: left;
+}
+#play{
+	    margin-left: 160px;
+}
+#notice {
+			text-align: right;
+			right: 440px;
+			top: 20px;
+			z-index: 3;
+		}
+#rankicon {
+			text-align: right;
+			right: 150px;
+			top: 20px;
+			z-index: 3;
+		}
+#result {
+			text-align: right;
+			right: 620px;
+			top: 180px;
+			z-index: 5;
+		}
+#img {
+	text-align: right;
+			right: 390px;
+			top: 5px;
+			z-index: 4;
+}
+#frame {
+	text-align: left;
+	left: 10px;
+	top: 10px;
+}
+#pointsicon {
+	color: red;
+	    font-weight: 600;
+	font-size: 30px;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+#lifeicon  {
+	color: blue;
+	    font-weight: 600;
+	font-size: 30px;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+#liveicon  {
+	color: green;
+	    font-weight: 600;
+	font-size: 30px;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+#play {
+	max-width: 100%;
+  
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+	}
+	#play:hover  {
+	-moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+</style>
+ 
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body  onkeypress="buyArmor(event)">
+<script type="text/javascript">var zoomlevel=1;
+
+    $("body").dblclick(function(ev) {
+        zoomlevel = zoomlevel == 1 ? 2 : 1;
+
+
+
+        $(this).css({
+            "-moz-transform":"scale("+zoomlevel+")",
+            "-webkit-transform":"scale("+zoomlevel+")",
+            "-o-transform":"scale("+zoomlevel+")",
+            "-ms-transform":"scale("+zoomlevel+")"
+        });
+
+
+    });</script>
+<p id="gameover"></p>
+<div id = "notice">
+<p id="boom"></p>
+</div>
+
+<div id = "result">
+</div>
+<div id = "rank">
+<p id="pointsicon"></p>
+<p id="points"></p>
+</div>
+<div id = "armor">
+<p id="lifeicon"></p>
+</div>
+<div id = "heal">
+<p id="liveicon"></p>
+</div>
+<div id = "gameover">
+<p id="gameovericon"></p>
+<p id="play" ></p>
+</div>
+
+<div id = "rankicon"></div>
+<canvas id='c'></canvas>
+<div>
+	
+  	<div class="container">
+  	</div>
+
+</div>
+<script src="game.js"></script>
+<div id="how">
+  <script type="text/javascript">
+  	var audio = new Audio('start.ogg');
+					audio.play();
+  </script>
+
+</div>
+
+
+
+
+</body>
+</html>	
